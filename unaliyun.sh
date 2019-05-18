@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
 #卸载阿里云云盾
 uninstall() {
     var=$(lsb_release -a | grep Gentoo)
