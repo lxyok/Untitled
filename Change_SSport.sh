@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-09-25 14:36:45
  # @LastEditors: lxyok
- # @LastEditTime: 2019-09-25 15:52:21
+ # @LastEditTime: 2019-09-26 17:58:15
 ###
 
 change_port() {
@@ -55,3 +55,5 @@ cat << EOF > test.json
 }
 EOF
 
+
+/etc/init.d/shadowsocks-libev restart
