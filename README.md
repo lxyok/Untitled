@@ -3,7 +3,7 @@
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: lxyok
- * @LastEditTime: 2019-09-27 12:58:23
+ * @LastEditTime: 2019-09-27 13:03:58
  -->
 # 说明   
 --------------
@@ -28,4 +28,3 @@ chmod +x unaliyun.sh && bash unaliyun.sh
 chmod +x shadowsocks-all.sh 
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
  ```
- 
