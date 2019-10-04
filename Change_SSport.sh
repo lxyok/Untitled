@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-09-25 14:36:45
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-04 14:27:01
+ # @LastEditTime: 2019-10-04 14:29:22
 ###
 
 change_port() {
@@ -41,7 +41,7 @@ change_port
 change_password
 #/etc/shadowsocks-libev/config.json
 
-cat << EOF > config.json
+cat << EOF > /etc/shadowsocks-libev/config.json
 {
 "server":"0.0.0.0",
 "server_port":"${shadowsocksport}",
