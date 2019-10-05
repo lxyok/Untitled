@@ -14,7 +14,13 @@
  wget --no-check-certificate -O Change_SSport.sh https://raw.githubusercontent.com/lxyok/Untitled/master/Change_SSport.sh &&
 chmod +x Change_SSport.sh && bash Change_SSport.sh
  ```
- 
+## setup_python.sh
+### 安装多个版本的python
+ ``` BASH
+wget -N --no-check-certificate "https://raw.githubusercontent.com/lxyok/Untitled/master/setup_python.sh" && 
+chmod +x setup_python.sh && bash setup_python.sh
+ ```
+
  ## unaliyun.sh 
  ### 卸载阿里云盾
   ``` BASH
