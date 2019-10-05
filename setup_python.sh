@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 20:58:06
+ # @LastEditTime: 2019-10-05 21:06:20
 ###
 
 sh_ver="1.0"
@@ -51,7 +51,7 @@ installpython2.7.5(){
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
         mkdir python_setup && cd python_setup
@@ -66,7 +66,7 @@ installpython2.7.5(){
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -86,7 +86,7 @@ installpython2.7.16(){
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
         mkdir python_setup && cd python_setup
@@ -101,7 +101,7 @@ installpython2.7.16(){
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -120,7 +120,7 @@ installpython3.7.3(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
@@ -135,7 +135,7 @@ installpython3.7.3(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -154,7 +154,7 @@ installpython3.5.7(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
@@ -169,7 +169,7 @@ installpython3.5.7(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -188,7 +188,7 @@ installpython3.6.9(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
@@ -203,7 +203,7 @@ installpython3.6.9(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -222,7 +222,7 @@ installpython3.7.4(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
         apt-get update && apt-get -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
@@ -237,7 +237,7 @@ installpython3.7.4(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd ../../ && rm -rf python_setup
+        #cd ../../ && rm -rf python_setup
     fi
 }
 
