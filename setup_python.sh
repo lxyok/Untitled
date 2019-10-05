@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 21:12:04
+ # @LastEditTime: 2019-10-05 21:23:11
 ###
 
 sh_ver="1.0"
@@ -38,8 +38,9 @@ check_sys(){
 #安装python2.7.5
 installpython2.7.5(){
     if [[ "${release}" == "centos" ]]; then
-        yum install -y gcc make
-        mkdirpython_install && cdpython_install
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+        mkdir python_install && cd python_install
         mkdir /usr/local/python275
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
         tar -xvf Python-2.7.5.tgz
@@ -53,8 +54,11 @@ installpython2.7.5(){
         python -V
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
-        apt-get update && apt-get -y gcc make
-        mkdirpython_install && cdpython_install
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+        mkdir python_install && cd python_install
         mkdir /usr/local/python275
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
         tar -xvf Python-2.7.5.tgz
@@ -73,8 +77,9 @@ installpython2.7.5(){
 #安装python2.7.16
 installpython2.7.16(){
     if [[ "${release}" == "centos" ]]; then
-        yum install -y gcc make
-        mkdirpython_install && cdpython_install
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+        mkdir python_install && cd python_install
         mkdir /usr/local/python2716
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz"
         tar -xvf Python-2.7.16.tgz
@@ -88,8 +93,11 @@ installpython2.7.16(){
         python -V
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
-        apt-get update && apt-get -y gcc make
-        mkdirpython_install && cdpython_install
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+        mkdir python_install && cd python_install
         mkdir /usr/local/python2716
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz"
         tar -xvf Python-2.7.16.tgz
@@ -109,9 +117,10 @@ installpython2.7.16(){
 installpython3.7.3(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y gcc make
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python373
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz"
         tar -xvf Python-3.7.3.tgz && cd Python-3.7.3
         ./configure --prefix=/usr/local/python373
@@ -123,9 +132,12 @@ installpython3.7.3(){
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y gcc make
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
         mkdir /usr/local/python373
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz"
         tar -xvf Python-3.7.3.tgz
         cd Python-3.7.3
@@ -143,9 +155,10 @@ installpython3.7.3(){
 installpython3.5.7(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y gcc make
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python357
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.5.7/Python-3.5.7.tgz"
         tar -xvf Python-3.5.7.tgz && cd Python-3.5.7
         ./configure --prefix=/usr/local/python357
@@ -157,9 +170,12 @@ installpython3.5.7(){
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y gcc make
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
         mkdir /usr/local/python357
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.5.7/Python-3.5.7.tgz"
         tar -xvf Python-3.5.7.tgz
         cd Python-3.5.7
@@ -177,9 +193,10 @@ installpython3.5.7(){
 installpython3.6.9(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y gcc make
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python369
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz"
         tar -xvf Python-3.6.9.tgz && cd Python-3.6.9
         ./configure --prefix=/usr/local/python369
@@ -191,9 +208,12 @@ installpython3.6.9(){
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y gcc make
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
         mkdir /usr/local/python369
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz"
         tar -xvf Python-3.6.9.tgz
         cd Python-3.6.9
@@ -211,9 +231,10 @@ installpython3.6.9(){
 installpython3.7.4(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y gcc make
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python374
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz"
         tar -xvf Python-3.7.4.tgz && cd Python-3.7.4
         ./configure --prefix=/usr/local/python374
@@ -225,9 +246,12 @@ installpython3.7.4(){
         #cd ../../ && rm -rfpython_install
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y gcc make
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
         mkdir /usr/local/python374
-        mkdirpython_install && cdpython_install
+        mkdir python_install && cd python_install
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz"
         tar -xvf Python-3.7.4.tgz
         cd Python-3.7.4
@@ -280,6 +304,10 @@ start_menu(){
     echo && echo -e " Python 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   -- 就是爱生活 | 94ish.me --
 
+如果安装成功最后一行会显示当前python的版本号，否则就是失败。
+如果安装成功最后一行会显示当前python的版本号，否则就是失败。
+如果安装成功最后一行会显示当前python的版本号，否则就是失败。
+
  ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
 ————————————安装管理————————————
  ${Green_font_prefix}1.${Font_color_suffix} ok安装 python2.7.5
@@ -294,7 +322,7 @@ start_menu(){
  ${Green_font_prefix}9.${Font_color_suffix} 卸载全部python
  ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
  ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
-————————————————————————————————" && echo
+    ————————————————————————————————" && echo
     
     echo
     read -p " 请输入数字 [0-11]:" num
