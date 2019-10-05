@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 20:26:21
+ # @LastEditTime: 2019-10-05 20:35:02
 ###
 
 sh_ver="1.0"
@@ -49,6 +49,7 @@ installpython2.7.5(){
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -63,6 +64,7 @@ installpython2.7.5(){
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
@@ -82,6 +84,7 @@ installpython2.7.16(){
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -96,6 +99,7 @@ installpython2.7.16(){
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
@@ -114,6 +118,7 @@ installpython3.7.3(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -128,6 +133,7 @@ installpython3.7.3(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
@@ -146,6 +152,7 @@ installpython3.5.7(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -160,6 +167,7 @@ installpython3.5.7(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
@@ -178,6 +186,7 @@ installpython3.6.9(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -192,6 +201,7 @@ installpython3.6.9(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
@@ -210,6 +220,7 @@ installpython3.7.4(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
@@ -224,6 +235,7 @@ installpython3.7.4(){
         make
         make install > ../../python_install.log
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
+        echo 当前python版本：
         python -V
         cd .. && rm -rf python_setup
     fi
