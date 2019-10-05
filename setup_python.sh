@@ -2,11 +2,11 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 ###
-# @Description: 简单描述一下这个文件
+# @Description: 安装各个版本的python
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 20:35:02
+ # @LastEditTime: 2019-10-05 20:39:10
 ###
 
 sh_ver="1.0"
