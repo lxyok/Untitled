@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 20:39:10
+ # @LastEditTime: 2019-10-05 20:51:23
 ###
 
 sh_ver="1.0"
@@ -38,7 +38,7 @@ check_sys(){
 #安装python2.7.5
 installpython2.7.5(){
     if [[ "${release}" == "centos" ]]; then
-        yum install -y wget
+        yum install -y wget gcc
         mkdir python_setup && cd python_setup
         mkdir /usr/local/python275
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
@@ -51,9 +51,9 @@ installpython2.7.5(){
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir python_setup && cd python_setup
         mkdir /usr/local/python275
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
@@ -66,14 +66,14 @@ installpython2.7.5(){
         ln -s /usr/local/python275/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
 #安装python2.7.16
 installpython2.7.16(){
     if [[ "${release}" == "centos" ]]; then
-        yum install -y wget
+        yum install -y wget gcc
         mkdir python_setup && cd python_setup
         mkdir /usr/local/python2716
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz"
@@ -86,9 +86,9 @@ installpython2.7.16(){
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir python_setup && cd python_setup
         mkdir /usr/local/python2716
         wget -N --no-check-certificate "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz"
@@ -101,7 +101,7 @@ installpython2.7.16(){
         ln -s /usr/local/python2716/bin/python2 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -109,7 +109,7 @@ installpython2.7.16(){
 installpython3.7.3(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y wget
+        yum install -y wget gcc
         mkdir /usr/local/python373
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz"
@@ -120,10 +120,10 @@ installpython3.7.3(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir /usr/local/python373
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz"
@@ -135,7 +135,7 @@ installpython3.7.3(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python373/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -143,7 +143,7 @@ installpython3.7.3(){
 installpython3.5.7(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y wget
+        yum install -y wget gcc
         mkdir /usr/local/python357
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.5.7/Python-3.5.7.tgz"
@@ -154,10 +154,10 @@ installpython3.5.7(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir /usr/local/python357
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.5.7/Python-3.5.7.tgz"
@@ -169,7 +169,7 @@ installpython3.5.7(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python357/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -177,7 +177,7 @@ installpython3.5.7(){
 installpython3.6.9(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y wget
+        yum install -y wget gcc
         mkdir /usr/local/python369
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz"
@@ -188,10 +188,10 @@ installpython3.6.9(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir /usr/local/python369
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz"
@@ -203,7 +203,7 @@ installpython3.6.9(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python369/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
@@ -211,7 +211,7 @@ installpython3.6.9(){
 installpython3.7.4(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        yum install -y wget
+        yum install -y wget gcc
         mkdir /usr/local/python374
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz"
@@ -222,10 +222,10 @@ installpython3.7.4(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
         elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
         cd ~
-        apt-get update && apt-get -y wget
+        apt-get update && apt-get -y wget gcc
         mkdir /usr/local/python374
         mkdir python_setup && cd python_setup
         wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz"
@@ -237,7 +237,7 @@ installpython3.7.4(){
         mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python374/bin/python3 /usr/bin/python
         echo 当前python版本：
         python -V
-        cd .. && rm -rf python_setup
+        cd ../../ && rm -rf python_setup
     fi
 }
 
