@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 21:23:11
+ # @LastEditTime: 2019-10-05 21:46:48
 ###
 
 sh_ver="1.0"
@@ -302,7 +302,6 @@ remove_all(){
 start_menu(){
     clear
     echo && echo -e " Python 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  -- 就是爱生活 | 94ish.me --
 
 如果安装成功最后一行会显示当前python的版本号，否则就是失败。
 如果安装成功最后一行会显示当前python的版本号，否则就是失败。
@@ -319,8 +318,8 @@ start_menu(){
  ${Green_font_prefix}7.${Font_color_suffix} 安装 python3.7.5
  ${Green_font_prefix}8.${Font_color_suffix} 安装 python3.7.6
 ————————————杂项管理————————————
- ${Green_font_prefix}9.${Font_color_suffix} 卸载全部python
- ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
+ ${Green_font_prefix}9.${Font_color_suffix} 
+ ${Green_font_prefix}10.${Font_color_suffix} 
  ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
     ————————————————————————————————" && echo
     
