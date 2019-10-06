@@ -6,7 +6,7 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-06 10:10:53
+ # @LastEditTime: 2019-10-06 10:13:06
 ###
 
 sh_ver="1.1"
@@ -321,7 +321,7 @@ ${Red_font_prefix}如果安装成功最后一行会显示当前python的版本�
  ${Green_font_prefix}9.${Font_color_suffix} 
  ${Green_font_prefix}10.${Font_color_suffix} 
  ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
-    ————————————————————————————————" && echo
+————————————————————————————————" && echo
     
     echo
     read -p " 请输入数字 [0-11]:" num
