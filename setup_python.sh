@@ -6,10 +6,10 @@ export PATH
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
  # @LastEditors: lxyok
- # @LastEditTime: 2019-10-05 21:46:48
+ # @LastEditTime: 2019-10-06 10:10:53
 ###
 
-sh_ver="1.0"
+sh_ver="1.1"
 github="raw.githubusercontent.com/lxyok/Untitled/master/"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -303,9 +303,9 @@ start_menu(){
     clear
     echo && echo -e " Python 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
 
-如果安装成功最后一行会显示当前python的版本号，否则就是失败。
-如果安装成功最后一行会显示当前python的版本号，否则就是失败。
-如果安装成功最后一行会显示当前python的版本号，否则就是失败。
+${Red_font_prefix}如果安装成功最后一行会显示当前python的版本号，否则就是失败。${Font_color_suffix}
+${Red_font_prefix}如果安装成功最后一行会显示当前python的版本号，否则就是失败。${Font_color_suffix}
+${Red_font_prefix}如果安装成功最后一行会显示当前python的版本号，否则就是失败。${Font_color_suffix}
 
  ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
 ————————————安装管理————————————
