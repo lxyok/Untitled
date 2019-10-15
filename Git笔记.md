@@ -3,7 +3,7 @@
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: lxyok
- * @LastEditTime: 2019-10-15 22:36:57
+ * @LastEditTime: 2019-10-15 22:55:11
  -->
 # Git笔记
 
@@ -35,6 +35,13 @@ git pull origin master   名字  分支
 #### 上传到云（如果只有一个库 那么就可以 不要写 origin master ）   
 ``` git
 git push -u origin master
+```
+
+### 更新文件
+```
+git add .
+git commit -m "git笔记"
+git push origin master
 ```
 
 ### 创建一个本地库 然后传到云端
