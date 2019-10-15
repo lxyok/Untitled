@@ -3,7 +3,7 @@
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: lxyok
- * @LastEditTime: 2019-09-27 12:37:58
+ * @LastEditTime: 2019-10-15 22:36:57
  -->
 # Git笔记
 
@@ -35,4 +35,13 @@ git pull origin master   名字  分支
 #### 上传到云（如果只有一个库 那么就可以 不要写 origin master ）   
 ``` git
 git push -u origin master
+```
+
+### 创建一个本地库 然后传到云端
+```git init
+git add .
+git commint -m "第一次提交"
+git remote add origin git@gitee.com:lxyok/jsp.git
+git push -u origin master
+git pull --rebase origin master
 ```
