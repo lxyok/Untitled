@@ -3,7 +3,7 @@
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: lxyok
- * @LastEditTime: 2019-10-15 22:55:11
+ * @LastEditTime: 2019-10-28 14:51:40
  -->
 # Git笔记
 
@@ -49,6 +49,8 @@ git push origin master
 git add .
 git commint -m "第一次提交"
 git remote add origin git@gitee.com:lxyok/jsp.git
+
+git remote add origin git@github.com:lxyok/js.git
 git push -u origin master
 git pull --rebase origin master
 ```
