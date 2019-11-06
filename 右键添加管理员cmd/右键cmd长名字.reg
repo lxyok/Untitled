@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+ 
+[-HKEY_CLASSES_ROOT\Directory\shell\runas]
+ 
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Open command window here as Administrator"
+"HasLUAShield"=""
+ 
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+ 
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
+ 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
+@="Open command window here as Administrator"
+"HasLUAShield"=""
+ 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+ 
+ 
+ 
+[-HKEY_CLASSES_ROOT\Drive\shell\runas]
+ 
+[HKEY_CLASSES_ROOT\Drive\shell\runas]
+@="Open command window here as Administrator"
+"HasLUAShield"=""
+ 
+[HKEY_CLASSES_ROOT\Drive\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+ 
+ 
+ 
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shell\runas]
+ 
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\runas]
+"HasLUAShield"=""
+@="Open command window here as Administrator"
+ 
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\runas\command]
