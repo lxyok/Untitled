@@ -1,0 +1,38 @@
+创建分支
+查看分支：git branch   查看所有分支： git branch -a
+创建分支：git branch <name>
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+合并某分支到当前分支：git merge <name>
+删除本地分支
+git branch -d <BranchName>
+删除远程分支
+git push origin --delete <BranchName>
+查看删除后分支们
+git branch -a
+
+删除文件  git rm 文件名
+在工作区git checkout -- file。
+提交到了暂存区  撤消操作  git reset --hard HEAD^
+
+从云获取信息（如果只有一个库 那么就可以 不要写 origin master ）
+git pull origin master   名字  分支
+上传到云（如果只有一个库 那么就可以 不要写 origin master ）
+git push -u origin master
+推送到所有库
+git push bit master ;git push gitee master ;git push github  master
+
+更新文件
+git add .
+git commit -m "git笔记"
+git push origin master
+
+创建一个本地库 然后传到云端
+git init
+git add .
+git commint -m "第一次提交"
+git remote add origin git@github.com:lxyok/mypython.git
+git remote add origin git@github.com:lxyok/html_js.git
+
+git push -u origin master
+
+git pull --rebase origin master
