@@ -38,6 +38,7 @@ git remote add gitee git@gitee.com:lxyok/untitled.git
 git remote add origin git@github.com:lxyok/mypython.git
 git remote add origin git@github.com:lxyok/html_js.git
 git remote add bit303 https://lxy303@bitbucket.org/lxy303/untitled.git
+
 origin 这个名字可以换 换成bit  gitee 等
 git push -u origin master
 
