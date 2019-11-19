@@ -5,8 +5,8 @@ export PATH
 # @Description: 安装各个版本的python
 # @Autor: lxyok
 # @Date: 2019-10-05 17:25:06
- # @LastEditors: lxyok
- # @LastEditTime: 2019-10-06 10:13:06
+ # @LastEditors: Please set LastEditors
+ # @LastEditTime: 2019-11-20 00:23:01
 ###
 
 sh_ver="1.1"
@@ -265,6 +265,85 @@ installpython3.7.4(){
     fi
 }
 
+#安装python3.7.5
+installpython3.7.5(){
+    if [[ "${release}" == "centos" ]]; then
+        cd ~
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+        mkdir /usr/local/python375
+        mkdir python_install && cd python_install
+        wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.5/Python-3.7.5.tgz"
+        tar -xvf Python-3.7.5.tgz && cd Python-3.7.5
+        ./configure --prefix=/usr/local/python375
+        make
+        make install > ../../python_install.log
+        mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python375/bin/python3 /usr/bin/python
+        echo 当前python版本：
+        python -V
+        #cd ../../ && rm -rfpython_install
+        elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
+        cd ~
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+        mkdir /usr/local/python375
+        mkdir python_install && cd python_install
+        wget -N --no-check-certificate "https://www.python.org/ftp/python/3.7.5/Python-3.7.5.tgz"
+        tar -xvf Python-3.7.5.tgz
+        cd Python-3.7.5
+        ./configure --prefix=/usr/local/python375
+        make
+        make install > ../../python_install.log
+        mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python375/bin/python3 /usr/bin/python
+        echo 当前python版本：
+        python -V
+        #cd ../../ && rm -rfpython_install
+    fi
+}
+
+
+#安装python3.8.0
+installpython3.8.0(){
+    if [[ "${release}" == "centos" ]]; then
+        cd ~
+        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+        mkdir /usr/local/python380
+        mkdir python_install && cd python_install
+        wget -N --no-check-certificate "https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz"
+        tar -xvf Python-3.8.0.tgz && cd Python-3.8.0
+        ./configure --prefix=/usr/local/python380
+        make
+        make install > ../../python_install.log
+        mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python380/bin/python3 /usr/bin/python
+        echo 当前python版本：
+        python -V
+        #cd ../../ && rm -rfpython_install
+        elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
+        cd ~
+        sudo apt-get update
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+        xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+        mkdir /usr/local/python380
+        mkdir python_install && cd python_install
+        wget -N --no-check-certificate "https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz"
+        tar -xvf Python-3.8.0.tgz
+        cd Python-3.8.0
+        ./configure --prefix=/usr/local/python380
+        make
+        make install > ../../python_install.log
+        mv /usr/bin/python /usr/bin/python_bak && ln -s /usr/local/python380/bin/python3 /usr/bin/python
+        echo 当前python版本：
+        python -V
+        #cd ../../ && rm -rfpython_install
+    fi
+}
+
+
+
 #更新脚本
 Update_Shell(){
     echo -e "当前版本为 [ ${sh_ver} ]，开始检测最新版本..."
@@ -315,8 +394,8 @@ ${Red_font_prefix}如果安装成功最后一行会显示当前python的版本�
  ${Green_font_prefix}4.${Font_color_suffix} ok安装 python3.6.9
  ${Green_font_prefix}5.${Font_color_suffix} ok安装 python3.7.3
  ${Green_font_prefix}6.${Font_color_suffix} ok安装 python3.7.4
- ${Green_font_prefix}7.${Font_color_suffix} 安装 python3.7.5
- ${Green_font_prefix}8.${Font_color_suffix} 安装 python3.7.6
+ ${Green_font_prefix}7.${Font_color_suffix} ok安装 python3.7.5
+ ${Green_font_prefix}8.${Font_color_suffix} ok安装 python3.8.0
 ————————————杂项管理————————————
  ${Green_font_prefix}9.${Font_color_suffix} 
  ${Green_font_prefix}10.${Font_color_suffix} 
@@ -351,7 +430,7 @@ ${Red_font_prefix}如果安装成功最后一行会显示当前python的版本�
             installpython3.7.5
         ;;
         8)
-            installpython3.7.6
+            installpython3.8.0
         ;;
         9)
             remove_all
