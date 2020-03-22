@@ -1,0 +1,57 @@
+详细说明 https://desperadoj.com/17.html
+
+106.15.250.108:30002
+http=music.desperadoj.com:30002, username=Netease Music, password=none, fast-open=false, udp-relay=false, tag=Netease China 1
+
+http=18.176.52.42:10000, username=Netease Music, password=none, fast-open=false, udp-relay=false, tag=Netease HK
+
+
+pm2 start app.js --name="ios" -- -s -p 10001:10002 -o kuwo qq migu -e https://music.163.com
+pm2 start app.js --name="general" -- -s -p 20001:20002 -o kuwo qq migu
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMzNAMzQuOTIuMTAwLjI0MDoyMTQ1Mg==#lxy303%e9%a6%99%e6%b8%afss1
+
+listen=ss://method:password@:port
+
+listen=ss://chacha20-ietf-poly1305:666@:10003
+
+#需转发的上游 UnblockNeteaseMusic HTTP 代理
+forward=http://127.0.0.1:port1
+
+
+ios-ss
+#开启调试模式,输出log
+verbose=True
+
+#Shadowsocks 监听的端口
+#Method:
+#  AEAD Ciphers:
+#    AEAD_AES_128_GCM AEAD_AES_192_GCM AEAD_AES_256_GCM AEAD_CHACHA20_POLY1305 AEAD_XCHACHA20_POLY1305
+#  Stream Ciphers:
+#    AES-128-CFB AES-128-CTR AES-192-CFB AES-192-CTR AES-256-CFB AES-256-CTR CHACHA20-IETF XCHACHA20 CHACHA20 RC4-MD5
+#  Alias:
+#    chacha20-ietf-poly1305 = AEAD_CHACHA20_POLY1305, xchacha20-ietf-poly1305 = AEAD_XCHACHA20_POLY1305
+listen=ss://chacha20-ietf-poly1305:666@:10003
+
+#需转发的上游 UnblockNeteaseMusic HTTP 代理
+forward=http://127.0.0.1:10001
+
+shadowsocks=34.92.21.58:10003, method=chacha20-ietf-poly1305, password=666, fast-open=false, udp-relay=false, tag=我的测试?? 网易云音乐
+
+
+
+
+
+
+[server_local]
+shadowsocks=34.92.21.58:10003, method=chacha20-ietf-poly1305, password=666, fast-open=false, udp-relay=false, tag=我的测试网易云音乐
+
+我的 香港节点  34.92.21.58:20001
+
+
+
+更新代码
+安装新的 CA 证书，设备上点击链接应该会自动跳转https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt
+在设置 > 通用 > 关于本机 > 证书信任设置，手动开启证书。官方教程：https://support.apple.com/zh-cn/HT204477
+启动命令改为 node app.js -p port1:port2（port2 是用来内部转发的 https 端口），在 WiFi 设置里开启 http 代理，手动，填 IP 端口号 port1
+v0.16.0 及以上版本因音源默认不通过服务器转发，需要增加 -e http://music.163.com 或 -e https://music.163.com 让音源请求通过服务器 (两种 -e 哪个能用自行测试下)
