@@ -38,7 +38,7 @@ check_sys(){
 #安装python2.7.5
 installpython2.7.5(){
     if [[ "${release}" == "centos" ]]; then
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir python_install && cd python_install
         mkdir /usr/local/python275
@@ -77,7 +77,7 @@ installpython2.7.5(){
 #安装python2.7.16
 installpython2.7.16(){
     if [[ "${release}" == "centos" ]]; then
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir python_install && cd python_install
         mkdir /usr/local/python2716
@@ -117,7 +117,7 @@ installpython2.7.16(){
 installpython3.7.3(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python373
         mkdir python_install && cd python_install
@@ -155,7 +155,7 @@ installpython3.7.3(){
 installpython3.5.7(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python357
         mkdir python_install && cd python_install
@@ -193,7 +193,7 @@ installpython3.5.7(){
 installpython3.6.9(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python369
         mkdir python_install && cd python_install
@@ -231,7 +231,7 @@ installpython3.6.9(){
 installpython3.7.4(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python374
         mkdir python_install && cd python_install
@@ -269,7 +269,7 @@ installpython3.7.4(){
 installpython3.7.5(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python375
         mkdir python_install && cd python_install
@@ -308,7 +308,7 @@ installpython3.7.5(){
 installpython3.8.0(){
     if [[ "${release}" == "centos" ]]; then
         cd ~
-        sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+        sudo yum -y install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
         sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
         mkdir /usr/local/python380
         mkdir python_install && cd python_install
