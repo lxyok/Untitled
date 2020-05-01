@@ -4,6 +4,7 @@
 # @Author : lxyok
 # @File : 自动爬取momentum壁纸并保存.py 
 # @Software: PyCharm
+# crontab  -e    1 1 * * * /usr/bin/python  /var/www/html/my/momentum.py
 # !/usr/bin/python
 
 import os
