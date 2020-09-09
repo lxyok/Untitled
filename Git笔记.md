@@ -1,9 +1,9 @@
 <!--
- * @Description: 简单描述一下这个脚本
+ * @Description: git 简单使用
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-09-09 21:37:45
+ * @LastEditTime: 2020-09-09 21:38:33
  -->
 # Git笔记
 
