@@ -3,14 +3,16 @@
  * @Autor: lxyok
  * @Date: 2019-09-25 17:40:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-09-09 21:35:26
+ * @LastEditTime: 2020-09-09 21:37:45
  -->
 # Git笔记
 
 
 ## 设置用户名
-#### git config --global user.name "Your Name"
-#### git config --global user.email "email@example.com"
+```
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+```
 #### 注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
 
 #### git config --global user.name "lxyok" 
