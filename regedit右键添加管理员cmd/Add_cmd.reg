@@ -6,6 +6,7 @@ Windows Registry Editor Version 5.00
 "ShowBasedOnVelocityId"=dword:639bc8
 "Icon"="cmd.exe"
 ;"Extended"=""
+;带有"Extended"=""的是shift+右键的
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
 @="cmd.exe /s /k pushd \"%V\""
