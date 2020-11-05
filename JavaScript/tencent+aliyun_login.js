@@ -2,7 +2,7 @@
 // @icon         https://cloud.tencent.com/favicon.ico?t=201902181234
 // @icon         https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico
 // @name         腾讯云阿里云自动点击登陆
-// @namespace    https://zfdev.com/
+// @namespace    https://github.com/lxyok
 // @version      0.0.1
 // @description  腾讯云自动登录
 // @author       lxyok
