@@ -3,12 +3,11 @@
 // @icon         https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico
 // @name         腾讯云阿里云自动点击登陆
 // @namespace    https://github.com/lxyok
-// @version      0.0.1
-// @description  腾讯云自动登录
+// @version      0.1
+// @description  腾讯云阿里云自动点击登录
 // @author       lxyok
 // @match        *://cloud.tencent.com/*
 // @match        *://*.aliyun.com/*
-// @run-at       document-idle
 // @grant        none
 // ==/UserScript==
 
