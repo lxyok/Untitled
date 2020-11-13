@@ -11,13 +11,13 @@
 ## Change_SSport.sh 
 ### 改变ss服务端的端口和密码
  ``` BASH
- wget --no-check-certificate -O Change_SSport.sh https://raw.githubusercontent.com/lxyok/Untitled/master/Change_SSport.sh &&
+ wget --no-check-certificate -O Change_SSport.sh https://raw.githubusercontent.com/lxyok/Untitled/master/%E4%B8%8A%E7%BD%91/Change_SSport.sh &&
 chmod +x Change_SSport.sh && bash Change_SSport.sh
  ```
 ## setup_python.sh
 ### 安装多个版本的python
  ``` BASH
-wget -N --no-check-certificate "https://raw.githubusercontent.com/lxyok/Untitled/master/setup_python.sh" && 
+wget -N --no-check-certificate "https://raw.githubusercontent.com/lxyok/Untitled/master/%E4%B8%8A%E7%BD%91/setup_python.sh" && 
 chmod +x setup_python.sh && bash setup_python.sh
  ```
 
