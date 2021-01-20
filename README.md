@@ -18,7 +18,7 @@ chmod +x Change_SSport.sh && bash Change_SSport.sh
 ### 安装多个版本的python
  ``` BASH
 wget -N --no-check-certificate "https://raw.githubusercontent.com/lxyok/Untitled/master/%E4%B8%8A%E7%BD%91/setup_python.sh" && 
-chmod +x setup_python.sh && bash setup_python.sh
+chmod +x setup_python.sh && bash setup_python.sh 2>&1 | tee setup_python.log
  ```
 
  ## unaliyun.sh 
