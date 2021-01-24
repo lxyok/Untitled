@@ -34,3 +34,11 @@ chmod +x unaliyun.sh && bash unaliyun.sh
 chmod +x shadowsocks-all.sh 
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
  ```
+ 
+ ## 安装使用tailf.c
+
+  ``` BASH
+  wget --no-check-certificate -O unaliyun.sh https://raw.githubusercontent.com/lxyok/Untitled/master/taclif.c &&
+gcc -Wall -o /usr/bin/tailf tailf.c
+  ```
+ 
