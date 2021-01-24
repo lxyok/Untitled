@@ -38,7 +38,7 @@ chmod +x shadowsocks-all.sh
  ## 安装使用tailf.c
 
   ``` BASH
-  wget --no-check-certificate -O unaliyun.sh https://raw.githubusercontent.com/lxyok/Untitled/master/taclif.c &&
+  wget --no-check-certificate -O tailf.c https://raw.githubusercontent.com/lxyok/Untitled/master/tailf.c &&
 gcc -Wall -o /usr/bin/tailf tailf.c
   ```
  
